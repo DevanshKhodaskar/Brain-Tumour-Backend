@@ -2,8 +2,10 @@ from flask import Flask, request, render_template, send_from_directory
 import cv2
 import os
 from ultralytics import YOLO
-from flask_cors import CORS
+from flask_cors import CORS
+
 app = Flask(__name__)
+
 CORS(app)
 # Load YOLO segmentation model
 model = YOLO("best.pt")  # Replace with your trained YOLO model
